@@ -98,6 +98,15 @@ if has("cscope")
     nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
 
     "重新定义快捷键
+    
+    "   's'   symbol: find all references to the token under cursor
+    "   'g'   global: find global definition(s) of the token under cursor
+    "   'c'   calls:  find all calls to the function name under cursor
+    "   't'   text:   find all instances of the text under cursor -查找缓慢
+    "   'e'   egrep:  egrep search for the word under cursor-查找缓慢
+    "   'f'   file:   open the filename under cursor-不使用，因为代码中很少出现有后缀名的文件名
+    "   'i'   includes: find files that include the filename under cursor-跟f类似
+    "   'd'   called: find functions that function under cursor calls-没看出什么作用
     nmap <leader>fs :cs find s <C-R>=expand("<cword>")<CR><CR>
     nmap <leader>fg :cs find g <C-R>=expand("<cword>")<CR><CR>
     nmap <leader>fc :cs find c <C-R>=expand("<cword>")<CR><CR>
